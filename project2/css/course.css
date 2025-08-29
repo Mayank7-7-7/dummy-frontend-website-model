@@ -1,0 +1,206 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url("/bg3.gif") no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  max-width: 180px;
+}
+
+header ol {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+header ol li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+.logo img {
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Courses Section */
+section h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 40px 0;
+  color: #ffcc00;
+  animation: fadeIn 2s ease;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto 50px auto;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 1.5s ease;
+}
+
+table thead {
+  background: linear-gradient(90deg, #ff6600, #ffcc00);
+  color: #000;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: center;
+}
+
+table tbody tr {
+  transition: all 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+table tbody tr:hover {
+  background: rgba(255, 204, 0, 0.2);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+table a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+table a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 50px 20px;
+  margin-top: auto;
+  color: #ccc;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
