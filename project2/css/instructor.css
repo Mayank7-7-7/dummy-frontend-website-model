@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url("/bg2.gif") no-repeat center center/cover;
+  background: url("/project2/bg2.gif") no-repeat center center/cover;
   color: #d06c6c;
   min-height: 100vh;
   display: flex;
