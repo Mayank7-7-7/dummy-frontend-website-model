@@ -52,7 +52,7 @@ header ul li a:hover {
 main {
   text-align: center;
   padding: 80px 20px;
-  background: url("/bganimation.gif") center/cover no-repeat fixed;
+  background: url("/project2/bganimation.gif") center/cover no-repeat fixed;
   color: #fff;
 }
 
