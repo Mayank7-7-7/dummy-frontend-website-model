@@ -1,0 +1,169 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: url("/bg2.gif") no-repeat center center/cover;
+  color: #d06c6c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header img {
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff9800;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Main Section */
+main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section b {
+  font-size: 2rem;
+  color: #ff9800;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Instructor Cards */
+.instructor_container {
+  display: inline-block;
+  margin: 10px;
+}
+
+.instructor_card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  width: 230px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.instructor_card img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.instructor_card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.instructor_card:hover img {
+  transform: scale(1.1);
+}
+
+.instructor_card h3 {
+  margin-top: 12px;
+  color: #ff9800;
+}
+
+.instructor_card p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  color: #ddd;
+}
+
+.instructor_card a {
+  color: #00c3ff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 500;
+}
+
+.instructor_card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-col h3 {
+  color: #ff9800;
+  margin-bottom: 12px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
