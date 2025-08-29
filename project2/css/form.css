@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url("/bg.png") no-repeat center center/cover;
+  background: url("/project2/bg.png") no-repeat center center/cover;
   color: #333;
   line-height: 1.6;
   min-height: 100vh;
