@@ -1,0 +1,180 @@
+/* ===== Reset & Base Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url("/bg.png") no-repeat center center/cover;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease;
+}
+
+header .logo img {
+  width: 160px;
+  transition: transform 0.3s ease;
+}
+header .logo img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+nav ul li a:hover {
+  color: #f8c102;
+  transform: translateY(-2px);
+}
+
+/* ===== Form Section ===== */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 400px;
+  animation: fadeInUp 1s ease;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-size: 2rem;
+}
+
+form div, form label, form input, form textarea, form select {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, select, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #f8c102;
+  box-shadow: 0 0 8px rgba(248, 193, 2, 0.5);
+}
+
+/* Comments Box */
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Button */
+button {
+  background: #f8c102;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  background: #d9a600;
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: #bbb;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-col ul li a:hover {
+  color: #f8c102;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
